@@ -5,16 +5,15 @@
 3. Умножить на 3
 Сколько разных чисел может быть получено из числа 1 с помощью программ, состоящих из 7 команд?
 """
-# dict = set()
-# def f(x, step):
-#     dict.add(x)
-#     if step == 0: return     # кал нерабочий
-#     f(x+1, step-1)
-#     f(x+5, step-1)
-#     f(x*3, step-1)
+dict = set()
+def f(x, step):
+    if step == 0: dict.add(x); return
+    f(x+1, step-1)
+    f(x+5, step-1)
+    f(x*3, step-1)
 
-# f(1, 7)
-# print(len(dict))
+f(1, 7)
+print(len(dict))
 
 def f(x,step,res=[]):
     if step == 7:

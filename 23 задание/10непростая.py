@@ -8,8 +8,7 @@
 """
 dict = set()
 def f(x, step):
-    dict.add(x)
-    if step == 0: return        # это работает
+    if step == 0: dict.add(x); return;      # это работает
     f(x+1, step-1)
     f(x*2-3, step-1)
 
