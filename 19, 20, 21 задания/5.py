@@ -18,10 +18,6 @@ def g(s):
     if all( g(x) in ("p1", "p2") for x in moves(s) ): return "v2"
 
 
-for s in range(1, 39+1):
-    print(s, g(s))
-
-
 print("Задание 19")
 for s in range(1, 39+1):
     if g(s) == "v1": print(s); break
