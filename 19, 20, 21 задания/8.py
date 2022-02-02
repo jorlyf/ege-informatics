@@ -22,4 +22,4 @@ for s in range(1, 26):
 
 print(".21")
 for s in range(1, 26):
-    if g(s) == "v1": print(s); break
+    if g(s) == "v2": print(s); break

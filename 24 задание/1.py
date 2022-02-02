@@ -1,7 +1,6 @@
 f = open("24 задание/24-05.txt")
 a = f.readline()
 
-
 count = 0
 nums = []
 ts = ""

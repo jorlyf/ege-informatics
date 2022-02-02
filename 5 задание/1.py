@@ -1,10 +1,6 @@
-from hashlib import new
-
-
 def getR(N):
     aBin = [x for x in bin(N)]
     aBin.pop(0); aBin.pop(0)
- 
 
     aBin.append(str(aBin.count("1") % 2))
     aBin.append(str(aBin.count("1") % 2))

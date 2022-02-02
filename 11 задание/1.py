@@ -7,9 +7,8 @@
 """
 
 # чтобы закодировать 17 букв надо минимум 5 битов 2^32 = 32 символов
-pswSymbolBits = 5
 pswBits = 5 * 10
-pswBits = pswBits * 40
-pswBytes = pswBits / 8 # 250 bytes for 40 users
-print(600 - pswBytes)
+pswBytes = (pswBits // 8) + 1 # 250 bytes for 40 users
+pswBytes = pswBytes * 40
+print((600 - pswBytes) / 40)
 

@@ -3,12 +3,13 @@ def u(x):
 
 diaposon = [x for x in range(1574, 9426+1) if u(x)]
 print("sum =", sum(diaposon))
-# какое еще множество в условии?????????
+
 mx = 0
 count = 0
 for a in range(1574, 9426+1):
     if a not in diaposon:
         count += 1
         mx = max(mx, count)
+    else: count = 0
 
 print("mx count =", mx)
