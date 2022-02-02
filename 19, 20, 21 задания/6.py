@@ -3,7 +3,7 @@
 +3
 *2
 
-win >= 
+win >= 40
 """
 from functools import lru_cache
 
