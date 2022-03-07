@@ -4,9 +4,9 @@
 # КОНЕЦ ПОКА
 # КОНЕЦ
 
-s = "12" * 12
+s = "12" * 11 + "1111"
 while "12" in s:
     s = s.replace("12", "4", 1)
 
 print(s)
-print(s.count("4"))
+print(sum(map(int, s)))

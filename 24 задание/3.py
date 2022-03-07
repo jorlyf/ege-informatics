@@ -9,9 +9,9 @@ for i in range(0, len(a)):
         else:
             словарь[a[i+1]] = 1
 
-print(словарь)
 mx = 0
 for key in словарь:
     if словарь[key] > mx:
         mx = словарь[key]
-        print(key, словарь[key])
+
+print(mx)

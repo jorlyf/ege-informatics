@@ -8,7 +8,7 @@ def f(x):
     return a, b
 
 cnt = 0
-for x in range(-10 , 500000):
+for x in range(-10000 , 500000):
     if f(x) == (2, 12):
         cnt += 1
         print(cnt)

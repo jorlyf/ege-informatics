@@ -16,7 +16,7 @@ def f(x, a1, a2):
 maxA = 0
 for a1 in range(0, 151):
     for a2 in range(a1, 151):
-        if all(f(x, a1, a2) for x in range(-180, 180)):
+        if all(f(x, a1, a2) for x in range(-500, 500)):
             maxA = max(maxA, a2-a1)
 
-print(maxA)
+print(maxA / 10)

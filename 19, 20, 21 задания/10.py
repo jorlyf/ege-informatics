@@ -1,6 +1,5 @@
 from functools import lru_cache
 
-
 def moves(s):
     return (s+2, s*3)
 
@@ -28,5 +27,5 @@ print("2:",cnt)
 
 # 3
 for s in range(1, 49+1):
-    if g(s) == "P2":
+    if g(s) == "V2":
         print("3:", s)
