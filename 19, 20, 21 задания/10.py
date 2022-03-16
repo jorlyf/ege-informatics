@@ -23,6 +23,7 @@ cnt = 0
 for s in range(1, 49+1):
     if g(s) == "P2":
         cnt += 1
+        print(s)
 print("2:",cnt)
 
 # 3

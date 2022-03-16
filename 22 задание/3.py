@@ -10,5 +10,6 @@ def f(x):
 cnt = 0
 for x in range(-10000 , 500000):
     if f(x) == (2, 12):
+        print(x)
         cnt += 1
-        print(cnt)
+print(cnt)

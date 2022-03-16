@@ -19,5 +19,5 @@ def f(N):
 
 for N in range(1, 10000):
     if f(N) > 180:
-        print(N)
+        print(N, f(N))
         break

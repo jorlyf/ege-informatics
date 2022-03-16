@@ -14,4 +14,5 @@ for key in словарь:
     if словарь[key] > mx:
         mx = словарь[key]
 
+print(словарь)
 print(mx)
