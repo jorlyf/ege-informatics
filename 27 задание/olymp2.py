@@ -1,5 +1,4 @@
-f = open("27 задание/olymp2A.txt")
-
+f = open("27 задание/olymp2B.txt")
 N = int(f.readline())
 
 a = []
@@ -8,7 +7,7 @@ for i in range(N):
 
 zero_array = []
 cnt = 0
-print(a)
+
 for k in range(N):
     if a[k] == 0:
         zero_array.append(k)
@@ -16,19 +15,18 @@ for k in range(N):
 for i in range(N):
     x = a[i]
 
-    for j in range(N):
-        if i == j: continue
+    for j in range(i+1, N):
         y = a[j]
-        #print(x, y)
     
         сумма = x + y
+        if x == 0 or y == 0: continue
         if сумма % 2 != 0: continue
         
         for q in zero_array:
             if i < q < j:
                 cnt += 1
-                print(i, j)
-    # if i % 10 == 0:
-    #     print(i)
+                break
+    
+    if i % 1_000 == 0: print(i)
 
 print(cnt)

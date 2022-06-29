@@ -6,11 +6,11 @@
 из исходного числа 3 после выполнения программы,
 содержащей ровно 12 команд?
 """
-dict = set()
+set = set()
 def f(x, step):
-    if step == 0: dict.add(x); return;      # это работает
+    if step == 0: set.add(x); return;      # это работает
     f(x+1, step-1)
     f(x*2-3, step-1)
 
 f(3, 12)
-print(len(dict))
+print(len(set))

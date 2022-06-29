@@ -8,33 +8,29 @@
 не больше элемента пары, который встречается позже).
 """
 
-f = open("27 задание/1a.txt")
+f = open("27 задание/1b.txt")
 N = int(f.readline())
 
-pr= [0] * 51
-ps= [0] * 51
-sm=[]
+m = 100
+k = [10**10] * m
+
+left = 10**10
+right = 10**10
     
 for i in range(N):
-    x=int(f.readline())
-    ost = x % 100
-    if ost != 50:
-       if ost<50 and (pr[ost]==0 or x<pr[ost]):
-            pr[ost]=x
-       if ost>50 and (ps[100-ost]==0 or x<ps[100-ost]):
-           ps[100-ost]=x
-    else:
-       if (pr[50]==0 or x<pr[50]):
-           pr[50]=x
-       elif (ps[50]==0 or x<ps[50]):
-           ps[50]=x
+    x = int(f.readline())
 
-for i in range(0, 51):
-    if pr[i]!=0 and ps[i]!=0:
-        it=pr[i]+ps[i]
+    остаток = x % m
+    if остаток == 0:
+        if k[0] < x and k[0] + x < left + right:
+            left = k[0]
+            right = x
     else:
-        it=0
-    if it!=0:
-       sm+=[it]
+        if k[m-остаток] < x and k[m-остаток] + x < left + right:
+            left = k[m-остаток]
+            right = x
+    
+    if x < k[остаток]:
+        k[остаток] = x
 
-print(min(sm))
+print(left, right)
